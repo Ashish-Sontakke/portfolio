@@ -1,237 +1,936 @@
-<!DOCTYPE html>
-<html class="notion-html">
+<html>
 
-<head lang="en">
-	<meta charset="utf-8" />
-	<meta name="viewport"
-		content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
-	<title>Portfolio 2.1.0</title>
-	<meta name="description" content="Ashish Sontakke Portfolio" />
-	<script>
-		(window.__webStartTime = Date.now()),
-			(window.__webStartTimePerformance = performance.now());
-	</script>
-
-	<meta property="og:title" content="Ashish Sontakke Portfolio" />
-
-	<meta property="og:image" content="https://www.notion.so/images/meta/default.png" />
-	<meta property="og:locale" content="en_US" />
-	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
-	<link rel="apple-touch-icon" href="/images/logo-ios.png" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-itunes-app" content="app-id=1232780281" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="msapplication-tap-highlight" content="no" />
-	<link href="/print.b31f28aa.css" rel="stylesheet" media="print" />
-	<script defer="defer" src="/51-487dc016008d1bd86987.js"></script>
-	<script defer="defer" src="/app-b7004511a9c6902273a2.js"></script>
-	<link href="/app-92ff32befcdf57a136ce.css" rel="stylesheet" />
-</head>
-
-<body class="notion-body">
-	<script>
-		var parsed,
-			theme = "light",
-			localThemeKey = "theme",
-			themeRecord = localStorage.getItem("theme");
-		!themeRecord ||
-			((parsed = JSON.parse(themeRecord)) &&
-				parsed.mode &&
-				(theme = parsed.mode)),
-			"dark" === theme && document.body.classList.add("dark");
-	</script>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ashish Sontakke</title>
 	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
 		body {
-			background: #fff;
+			margin: 0;
+			padding: 0;
 		}
 
-		body.dark {
-			background: #191919;
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
 		}
 
-		.initial-loading-spinner {
-			-webkit-animation: rotate 1s linear infinite;
-			animation: rotate 1s linear infinite;
-			-webkit-transform-origin: center center;
-			transform-origin: center center;
-			width: 1em;
-			height: 1em;
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
 			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
 			display: block;
-			pointer-events: none;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
 		}
 
-		@-webkit-keyframes rotate {
-			0% {
-				-webkit-transform: rotate(0) translateZ(0);
-				transform: rotate(0) translateZ(0);
-			}
+		img {
+			max-width: 100%;
+		}
 
-			100% {
-				-webkit-transform: rotate(360deg) translateZ(0);
-				transform: rotate(360deg) translateZ(0);
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
 			}
 		}
 
-		@keyframes rotate {
-			0% {
-				-webkit-transform: rotate(0) translateZ(0);
-				transform: rotate(0) translateZ(0);
-			}
+		@page {
+			margin: 1in;
+		}
 
-			100% {
-				-webkit-transform: rotate(360deg) translateZ(0);
-				transform: rotate(360deg) translateZ(0);
-			}
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			text-indent: -1.7em;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(55, 53, 47, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.highlight-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.highlight-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.highlight-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.highlight-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.highlight-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.highlight-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.highlight-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.block-color-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.block-color-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.block-color-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(245, 224, 233, 1);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(232, 222, 238, 1);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(219, 237, 219, 1);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(227, 226, 224, 1);
+		}
+
+		.select-value-color-opaquegray {
+			background-color: rgba(255, 255, 255, 0.0375);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(250, 222, 201, 1);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(238, 224, 218, 1);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(255, 226, 221, 1);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(253, 236, 200, 1);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(211, 229, 239, 1);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 		}
 	</style>
-	<div id="initial-loading-spinner" style="
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-      ">
-		<div class="initial-loading-spinner" style="width: 24px; height: 24px">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-				xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="100%" height="100%" viewBox="0 0 24 24"
-				version="1.1" data-ember-extension="1">
-				<defs>
-					<linearGradient x1="28.1542969%" y1="63.7402344%" x2="74.6289062%" y2="17.7832031%" id="linearGradient-1">
-						<stop stop-color="rgba(164, 164, 164, 1)" offset="0%" />
-						<stop stop-color="rgba(164, 164, 164, 0)" stop-opacity="0" offset="100%" />
-					</linearGradient>
-				</defs>
-				<g id="Page-1" stroke="none" stroke-width="1" fill="none">
-					<g transform="translate(-236.000000, -286.000000)">
-						<g transform="translate(238.000000, 286.000000)">
-							<circle id="Oval-2" stroke="url(#linearGradient-1)" stroke-width="4" cx="10" cy="12" r="10" />
-							<path d="M10,2 C4.4771525,2 0,6.4771525 0,12" id="Oval-2" stroke="rgba(164, 164, 164, 1)"
-								stroke-width="4" />
-							<rect id="Rectangle-1" fill="rgba(164, 164, 164, 1)" x="8" y="0" width="4" height="4" rx="8" />
-						</g>
-					</g>
-				</g>
-			</svg>
+</head>
+
+<body>
+	<article id="9d188f14-5b20-4436-8f6d-c3b9a107665e" class="page sans">
+		<header>
+			<h1 class="page-title"><strong>Ashish Sontakke</strong></h1>
+		</header>
+		<div class="page-body">
+			<h3 id="53d3b8fd-2875-4ff7-96a0-8b17d62c851e" class="">Blockchain Developer</h3>
+			<div id="5d686286-3607-4bc3-b7c7-53895414195b" class="column-list">
+				<div id="709fa546-9842-441c-afda-349603a6a174" style="width:29.166666666666664%" class="column">
+					<p id="7aa77ae4-55b4-48e1-9f6f-feb6b0b68bc5" class="">(+91) 7083329220</p>
+				</div>
+				<div id="46214b7a-ee3f-45ae-9b33-d4179eda3f24" style="width:43.56060606060607%" class="column">
+					<p id="25758e66-cc2a-43ac-8cdf-ccd432ae0c26" class="">ashishsontakke12@gmail.com</p>
+				</div>
+				<div id="b06fafa4-d88d-42f0-8238-784a92cece5a" style="width:27.27272727272727%" class="column">
+					<p id="e5e8d8d8-d1c2-457c-8cfe-b7f86bbe5e1d" class="">Pune, India.</p>
+				</div>
+			</div>
+			<hr id="a81c5c92-f5dc-4230-9833-6b4a4daf1a13" />
+			<div id="3d19bfba-a380-44e0-b9be-e306c5e68fb0" class="column-list">
+				<div id="0da89ba5-6ba7-4740-bdd6-c15395ce48ac" style="width:50%" class="column">
+					<h3 id="5e8c266a-7c2b-4b08-95b0-1f704aa3ef53" class="">Education</h3>
+					<p id="2ce4ff6e-a628-4d33-8d60-9fbaefa9914d" class=""><mark class="highlight-blue"><strong>Pimpri Chinchwad
+								College Of Eng.</strong></mark></p>
+					<p id="f9f006c2-7940-41a4-8d06-0d9f588eb60a" class="">Bachelor Eng. Mechanical</p>
+					<p id="2e05ed1f-7976-4e15-a096-c36a508c2ed2" class="">June 2016 - March 2020</p>
+				</div>
+				<div id="6dde36a4-8362-41b1-a640-a790530c8e3d" style="width:50%" class="column">
+					<h3 id="15ba387d-b5b8-4691-acb1-c457bb2637c9" class=""><strong>SKILLS</strong></h3>
+					<p id="5372562f-356d-41af-b650-6c2fde595b93" class="">Flutter | Blockchain
+						Next.js | Solidity | Web3</p>
+				</div>
+			</div>
+			<hr id="9db2de59-caf5-42f7-b195-21e0fa396d69" />
+			<h3 id="60830a41-4a52-438a-8b26-f3edf5cb2a7b" class="">Work History</h3>
+			<div id="5d327bf9-3135-461f-86ed-d6ba937edd0d" class="column-list">
+				<div id="4da6fdf9-75bd-4f62-adb1-ce8f0fce016f" style="width:31.25%" class="column">
+					<p id="fabf94fc-0ab1-4b3b-89f9-76ab10c25a42" class=""><mark class="highlight-blue"><strong>Blockchain
+								Developer</strong></mark></p>
+				</div>
+				<div id="1451424f-1c0e-406f-8962-a28a1eb2cc73" style="width:68.75%" class="column">
+					<p id="aea8d4ba-8c8b-46e8-9c42-13c2e05a1dc5" class=""><strong>Pragmatic Techsoft</strong> [January 2022 -
+						Present]</p>
+				</div>
+			</div>
+			<p id="34d63169-56fe-4b4b-9fcd-e27d6fd11a25" class=""><strong>Asset Management</strong></p>
+			<p id="a77e4724-5aeb-4781-b5f3-3b4523207689" class="">I have been working with a DAO to build a decentralized
+				asset management platform. My role included working front-end, backend, and Smart contract Development in
+				solidity. I have written tests for smart contracts. authenticated users using message signatures using web3.js
+				and verifying those signatures. The project uses ethers for connecting and interacting with smart contracts. the
+				backend is built using Nest and MongoDB, for the frontend we have Next.js.</p>
+			<p id="8693b339-ea93-4ab9-ac17-ece4c7efd764" class="">Blockchain | Web3 | Solidity | MongoDB | Nest.js | Next.js
+			</p>
+			<hr id="7a182596-6167-44c9-bf80-d3de85f88030" />
+			<p id="e6b81377-3533-4052-83e3-b3458f06e125" class=""><strong>Whitepaper design</strong></p>
+			<p id="2085370e-9964-4caf-bd78-74d0f6cb3d47" class="">We had to come up with calculations for measuring the
+				performance of the asset management contract. also distribution of correct LP tokens for contributors. we
+				designed a system and also developed smart contracts that work according to the whitepaper. One of my primary
+				roles was to write tests with good solidity coverage, comply with all solidity style guides and prepare
+				contracts for review.</p>
+			<p id="4833443c-1393-4d95-ad02-34f23e08456e" class="">JavaScript | Solidity</p>
+			<hr id="216b5f4d-eec3-4940-9b73-859e3488d0ec" />
+			<div id="3e4dfbd6-acc6-4960-9d7b-e25fc7ecb140" class="column-list">
+				<div id="2d959c7e-84b9-44ae-b9e5-ccd0a4ec3ee4" style="width:25%" class="column">
+					<p id="baa68248-9fc5-4e28-80b4-d436b192d79c" class=""><mark class="highlight-blue"><strong>Flutter
+								Developer</strong></mark></p>
+				</div>
+				<div id="0cd9d40c-564d-4a2b-8ec7-628036324a2d" style="width:75%" class="column">
+					<p id="45d93fed-21e6-472d-ac7f-545eb0ba1153" class=""><strong>Pragmatic Techsoft [march 2021 - March
+							2022]</strong></p>
+				</div>
+			</div>
+			<p id="03a6e9cf-7fe8-42e9-aef2-747189bf499e" class=""><strong>E-commerce Mobile Application </strong></p>
+			<p id="aab86c53-cbae-4bd6-bcf1-43a267ac056b" class="">Orientals Farm is an E-commerce application built using
+				Flutter. it uses Odoo for its backend and works for quick delivery of groceries and fresh products in Jordan.
+				This application consists of integration with google maps, payment gateway, and Odoo ERP.</p>
+			<p id="62e0d4c7-da42-4648-af5f-59e0b177a29f" class="">Odoo | E-Commerce | Flutter </p>
+			<hr id="43595a09-1f74-49bb-8197-290f7bab45fc" />
+			<p id="a519dfc3-0bf0-4cf3-ba8e-c7bcf5e150fd" class=""><strong>Mobile Builder Application</strong></p>
+			<p id="6ea72186-b12e-4b90-8fb6-6e8438e11133" class="">Mobile Builder is a plug-and-play mobile application built
+				using flutter for Odoo ERP. It automatically connects to any Odoo instance and builds a fully functional
+				e-commerce application that can be deployed to the google play store or the app store. The application has
+				payment getaways integrated and is fully native and customizable.</p>
+			<p id="310cb8ee-4229-4ccd-991c-4ad1ec9115ec" class="">Flutter | Odoo | E-Commerce</p>
+			<hr id="eec9ce81-bad9-472f-a2c8-9b80971538f8" />
+			<div id="1b46d79b-9505-4653-9f9a-0e6d631aaef9" class="column-list">
+				<div id="c21fa475-ef00-4d82-9cf7-c098f6b8077b" style="width:25%" class="column">
+					<p id="1a6d4341-757d-43eb-800e-7a04cce8fde9" class=""><mark class="highlight-blue"><strong>Flutter
+								Developer</strong></mark></p>
+				</div>
+				<div id="d0d0c881-c3c2-461c-b237-7f6438cc4e23" style="width:75%" class="column">
+					<p id="40b2ec4d-b203-4e2b-9796-ea8744851fa6" class=""><strong>Aletia IT Solutions [October 2020 - March
+							2021]</strong></p>
+				</div>
+			</div>
+			<p id="d8972ffd-0ed0-4ee1-bda0-df72feb61915" class="">Tapal Diary - Mobile Application for India Post Employees.
+			</p>
+			<p id="d355ce2d-59fe-45aa-9bce-65432edef24f" class="">MeeHelp - Instant Maids and cooks Like OLA Uber.</p>
+			<p id="4073a015-f1ea-411f-af1f-2edcc8e08615" class="">SocietyMate - Society Management Software.</p>
+			<hr id="cdefc166-60b1-451d-8a6a-1f113085d393" />
+			<h3 id="3710ec08-f711-43c8-ba0b-059efa052de9" class="">Â Side Projects</h3>
+			<ul id="763257d4-5aa2-4d90-bce6-2fadb1cfec97" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">Certist</mark></strong>
+					<p id="656bea01-1a96-42fa-8c5c-347c5c1e0de2" class=""><a href="http://certist.tech">certist.tech</a> Personal
+						product
+						It&#x27;s one of my projects which we converted into a startup. I had to design the main webpage in Next.js
+						for the company which can help get leads. We are using the AWS email service for getting leads and the
+						project is deployed on Vercel.</p>
+					<p id="d64d04d0-eb12-4a03-adb7-94b3ba152004" class="">Created a webpage that is live and under continuous
+						improvements.</p>
+					<p id="9e99e666-e3d5-4a05-8686-13ea016eec8e" class="">Next.js | AWS Amplify</p>
+				</li>
+			</ul>
+			<ul id="8d613d20-f6df-4131-9056-f92e94b9fca4" class="bulleted-list">
+				<li style="list-style-type:disc"><strong><mark class="highlight-blue">Certist Playground</mark></strong>
+					<p id="4641348f-c08f-4bd0-9fe8-e101d241bddf" class=""><a
+							href="http://experience.certist.tech">experience.certist.tech</a> Personal product
+						Build a working demo for the certificate issuing system utilizing NFTs and smart contracts, The application
+						lets potential clients walk through the entire system and understand it. We can create a certificate and
+						grade credits for the student which then get minted as NFT. The front end uses Next.js and Smart Contracts
+						are in Solidity and for the backend, we are using Nest.</p>
+					<p id="5ee52f88-3d09-4be5-869e-665ed76b0179" class="">Next.js | Firebase</p>
+				</li>
+			</ul>
+			<hr id="2678735e-bb83-4c4a-95ee-9017755483a7" />
 		</div>
-	</div>
-	<script>
-		var spinner,
-			isElectron = "undefined" != typeof global || window.__isElectron,
-			isReactNative = /ReactNative/.test(navigator.userAgent),
-			showSpinner = isElectron || isReactNative;
-		!showSpinner ||
-			((spinner = document.getElementById("initial-loading-spinner")) &&
-				(spinner.style.opacity = 1));
-	</script>
-	<style id="scroll-properties"></style>
-	<div id="notion-app"></div>
-	<script>
-		window.CONFIG = {
-			env: "production",
-			isAdminMode: !1,
-			isLocalhost: !1,
-			offline: !0,
-			version: "23.10.25.67",
-			domainBaseUrl: "https://www.notion.so",
-			adminUrl: "https://admin.notion.so",
-			canaryDomainName: "canary.notion.com",
-			publicDomainName: "notion.site",
-			protocol: "notion",
-			staticS3: {
-				url: "https://prod-notion-assets.s3-us-west-2.amazonaws.com",
-				bucket: "prod-notion-assets",
-			},
-			lastUpdatedTime: 1659038044510,
-			api: {http: "/api/v3"},
-			googleOAuth: {
-				clientId:
-					"905154081809-858sm3f0qnalqd9d44d9gecjtrdji9tf.apps.googleusercontent.com",
-			},
-			messageStore: {url: "https://msgstore.www.notion.so", api: "/api/v1"},
-			stripe: {key: "pk_live_vuNO27XGTCbXjVwneiECILjT"},
-			revenueCat: {
-				apiResponseMaxAge: 6048e5,
-				entitlementIDs: {personal: "notion.id.personal_pro"},
-				productIDs: {
-					personal: {
-						monthly: "notion.id.personal_pro_monthly",
-						yearly: "notion.id.personal_pro_yearly",
-					},
-				},
-			},
-			intercom: {appId: "gpfdrxfd", adminId: "3483686"},
-			mutiny: {personalKey: "1149e901f65fc47c"},
-			segment: {writeKey: "g1mMn2qquRcv7exBIVDivoKl9cOrdxLA"},
-			amplitude: {apiKey: "af43d4b535912f7751949bfb061d8659"},
-			pricing: {
-				invoiceDaysUntilDue: 30,
-				team_free: {spaceBlockLimit: 1e3, fileUploadMaxBytes: 5e6},
-				personal_free: {fileUploadMaxBytes: 5e6},
-				student: {productId: "prod_FhChFoDp7gS1Ba"},
-				personal: {
-					productId: "prod_CpavZFCbxF2YGx",
-					monthlyPrice: 500,
-					yearlyPrice: 4800,
-				},
-				team: {
-					productId: "prod_CpawK4ih14xs4t",
-					monthlyPricePerMember: 1e3,
-					yearlyPricePerMember: 9600,
-				},
-				business: {
-					productId: "prod_LEnFERYcTgENz8",
-					monthlyPricePerMember: 1600,
-					yearlyPricePerMember: 16800,
-				},
-				enterprise: {
-					productId: "prod_Cpb8M1AFEFhdy1",
-					monthlyPricePerMember: 2500,
-					yearlyPricePerMember: 24e3,
-				},
-			},
-			desktopS3: {
-				url: "https://s3-us-west-2.amazonaws.com/desktop-release.notion-static.com",
-			},
-			publicFileS3: {
-				url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com",
-				bucket: "public.notion-static.com",
-			},
-			temporaryFileS3: {
-				url: "https://s3-us-west-2.amazonaws.com/temporary.notion-static.com",
-				bucket: "temporary.notion-static.com",
-			},
-			secureFileS3: {
-				url: "https://s3-us-west-2.amazonaws.com/secure.notion-static.com",
-				bucket: "secure.notion-static.com",
-			},
-			loggly: {token: "9b01b08e-c969-4e27-837c-805d1fc6ec7b"},
-			splunk: {token: "EA76605A-F565-4B17-A496-34435622A1EB"},
-			embedly: {key: "421626497c5d4fc2ae6b075189d602a2"},
-			aif: {url: "https://aif.notion.so/aif-production.html"},
-			contentful: {
-				spaceId: "spoqsaf9291f",
-				contentDeliveryToken: "AGqteRpWD8aE_kxy_s7_hSFAlKCh5qf-RctSU6vV6u0",
-				contentPreviewToken: "uR2ZVAs-9TMKDq0YKYVtczFplx6P9p06huCibZDJZKA",
-			},
-			iOSAppId: 1232780281,
-			facebook: {pixelId: "499229960464487"},
-			statsig: {
-				apiKey: "client-Tgza5wNFa8dVt9BdeUfG6Vkm29bHxX10MhoztTMzLBB",
-			},
-			googleReCaptcha: {
-				siteKey: "6LcvqigfAAAAAPaPL3j2YLldFcZVGwKvG9TmjDgK",
-			},
-			google: {
-				clientId:
-					"905154081809-858sm3f0qnalqd9d44d9gecjtrdji9tf.apps.googleusercontent.com",
-			},
-		};
-	</script>
+	</article>
 </body>
 
 </html>

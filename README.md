@@ -4,5 +4,8 @@
 
 ## Technologies Used
 
-- Next.js [https://nextjs.org/]
-- Tailwind CSS [https://tailwindcss.com/]
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/)
+

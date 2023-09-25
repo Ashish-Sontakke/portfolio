@@ -28,14 +28,14 @@ export default function Contact() {
 
     return (
         <section
-            className="md:col-span-1 row-span-1 col-span-2 h-full min-h-[240px] flex flex-col items-start justify-between text-center p-4 md:p-8 border rounded-xl hover:shadow">
+            className="md:col-span-1 col-span-2 h-full  flex flex-col items-start justify-between text-center p-4 md:p-8 border rounded-xl hover:shadow">
             <p className="text-sm">{`Let's work together`}</p>
             <div className="flex flex-col items-start justify-start">
                 <p className="mt-2">Contact Details</p>
                 <p className="font-extralight max-w-md break-all text-start">
                     {`ashishsontakke12@gmail.com`}
                 </p>
-                <div className="flex space-x-4 mt-2">
+                <div className="flex space-x-4 my-4">
                     {socials.map((social) => (
                         <a
                             key={social.name}

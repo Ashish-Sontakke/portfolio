@@ -6,7 +6,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'S Ashish',
-  description: 'Software Developer, Engineer. Here I share my learnings & projects',
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashish S",
+    description: "I'm Ashish Sontakke. I'm a Software Developer, Engineer. Here I share my learnings & projects",
+    creator: "@zeroAsh_",
+  },
+  description: "I'm Ashish Sontakke. I'm a Software Developer, Engineer. Here I share my learnings & projects",
 }
 
 export default function RootLayout({

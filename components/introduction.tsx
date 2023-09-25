@@ -1,44 +1,22 @@
 import { TwitterLogoIcon, GitHubLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons"
+import mimoji from "@/public/mimoji.png";
+import Image from "next/image";
+import { ModeToggle } from "./mode-toggle";
 
-const socials = [
-    {
-        name: "Twitter",
-        href: "https://twitter.com/zeroAsh_",
-        icon: TwitterLogoIcon,
-    },
-    {
-        name: "GitHub",
-        href: "https://github.com/Ashish-Sontakke",
-        icon: GitHubLogoIcon,
-    },
-    {
-        name: "Email",
-        href: "mailto:ashishsontakke12@gmail.com",
-        icon: EnvelopeClosedIcon,
-    },
-]
 
 export default function Introduction() {
-
     return (
         <section
-            className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-            <h1 className="text-6xl">S Ashish</h1>
-            <p className="text-xl mt-2">Software Developer, Engineer. Here I share my learnings & projects</p>
-            <div className="flex mt-4 space-x-4">
-                {socials.map((social) => (
-                    <a
-                        key={social.name}
-                        href={social.href}
-                        className="text-xl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span className="sr-only">{social.name}</span>
-                        <social.icon width={24} height={24}/>
-                    </a>
-                ))}
+            className="col-span-2 flex items-start justify-start text-center p-4 md:p-8 border rounded-xl hover:shadow">
+            <div className="flex flex-col items-start justify-between text-start">
+                <p className="text-sm">Welcome !</p>
+                <h1 className="text-4xl mt-4">S Ashish</h1>
+                <p className="text-lg mt-2 mb-4 max-w-md">
+                    {`Hey there, I'm Ashish Sontakke. I'm a Software Developer, Engineer. Here I share my learnings & projects`}
+                </p>
+                <ModeToggle />
             </div>
+            <Image src={mimoji} alt="mimoji" height={200} width={200} className="mx-4 rounded-full bg-gray-50 dark:bg-gray-900" />
         </section>
     );
 }

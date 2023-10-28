@@ -47,7 +47,7 @@ const tools_of_choice = [
 export default function About() {
     return (
         <section
-            className="col-span-2 row-span-1 md:row-span-2 md:col-span-1 h-full flex flex-col justify-around text-center p-4 md:p-8 border rounded-xl hover:shadow">
+            className="col-span-2 row-span-1 md:row-span-2 md:col-span-1 h-full flex flex-col justify-around text-center p-4 md:p-8 border hover:border-primary rounded-xl hover:shadow">
             <div className="flex flex-col items-start justify-between text-start mb-4 md:mb-0">
                 <p className="text-sm">About Me</p>
                 <p className="font-light mt-2">

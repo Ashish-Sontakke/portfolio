@@ -6,7 +6,7 @@ import { ModeToggle } from "./mode-toggle";
 export default function Introduction() {
     return (
         <section
-            className="col-span-2 row-span-1 flex flex-col md:flex-row items-center justify-start text-center p-4 md:p-8 border rounded-xl hover:shadow">
+            className="col-span-2 row-span-1 flex flex-col md:flex-row items-center justify-start text-center p-4 md:p-8 border hover:border-primary rounded-xl hover:shadow">
             <div className="flex flex-col items-start justify-between text-start mb-4 md:mb-0">
                 <p className="text-sm">Welcome !</p>
                 <h1 className="text-4xl mt-4">S Ashish</h1>

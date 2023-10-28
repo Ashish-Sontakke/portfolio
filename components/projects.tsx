@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import staticstudio from "@/public/projects/logo.svg";
 import tantheta from "@/public/projects/favicon.png";
+import continuity from "@/public/projects/continuity.jpeg";
 
 import { Link2Icon } from "@radix-ui/react-icons";
 const quick_links = [
@@ -14,6 +15,11 @@ const quick_links = [
         name: "Tantheta",
         image: tantheta,
         href: "https://tantheta.dev"
+    },
+    {
+        name: "Continuity Cafe",
+        image: continuity,
+        href: "https://continuity.cafe/home"
     }
 ];
 
@@ -21,7 +27,7 @@ export default function Projects() {
 
     return (
         <section
-            className="relative md:col-span-1 col-span-2 h-full  flex flex-col items-start justify-between text-center p-4 md:p-8 border rounded-xl hover:shadow">
+            className="relative md:col-span-1 col-span-2 h-full  flex flex-col items-start justify-between text-center p-4 md:p-8 border hover:border-primary rounded-xl hover:shadow">
             <Link2Icon className="absolute right-4 top-4" />
             <p className="text-sm">{`Projects`}</p>
             <div className="text-start">

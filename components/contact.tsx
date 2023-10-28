@@ -28,7 +28,7 @@ export default function Contact() {
 
     return (
         <section
-            className="md:col-span-1 col-span-2 h-full  flex flex-col items-start justify-between text-center p-4 md:p-8 border rounded-xl hover:shadow">
+            className="md:col-span-1 col-span-2 h-full  flex flex-col items-start justify-between text-center p-4 md:p-8 border hover:border-primary rounded-xl hover:shadow">
             <p className="text-sm">{`Let's work together`}</p>
             <div className="flex flex-col items-start justify-start">
                 <p className="mt-2">Contact Details</p>

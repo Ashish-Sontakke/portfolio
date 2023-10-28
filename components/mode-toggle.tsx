@@ -15,7 +15,7 @@ export function ModeToggle() {
                 size="icon"
                 onClick={() => setTheme("light")}
             >
-                <SunIcon className="h-[1.2rem] w-[1.2rem]" />
+                <SunIcon className="h-[1rem] w-[1rem]" />
                 <span className="sr-only">Toggle Light Theme</span>
             </Button>
             <Button
@@ -23,7 +23,7 @@ export function ModeToggle() {
                 size="icon"
                 onClick={() => setTheme("dark")}
             >
-                <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
+                <MoonIcon className="h-[1rem] w-[1rem]" />
                 <span className="sr-only">Toggle Dark Theme</span>
             </Button>
             <Button
@@ -31,7 +31,7 @@ export function ModeToggle() {
                 size="icon"
                 onClick={() => setTheme("system")}
             >
-                <DesktopIcon className="h-[1.2rem] w-[1.2rem]" />
+                <DesktopIcon className="h-[1rem] w-[1rem]" />
                 <span className="sr-only">Toggle System Theme</span>
             </Button>
         </div>
